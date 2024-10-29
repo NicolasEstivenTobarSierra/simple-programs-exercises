@@ -1,20 +1,19 @@
-# Solicitar las notas de los dos primeros certámenes y la nota de laboratorio
-C1 = float(input("Ingresa la nota del primer certamen: "))
-C2 = float(input("Ingresa la nota del segundo certamen: "))
-NL = float(input("Ingresa la nota de laboratorio: "))
+import math
 
-# Nota final que se desea alcanzar
-NF_deseada = 60
+# Definición de constantes
+M = 47  # Masa del huevo en gramos para un huevo pequeño
+rho = 1.038  # Densidad en g/cm³
+c = 3.7  # Capacidad calorífica específica en J/(g·K)
+K = 5.4e-3  # Conductividad térmica en W/(cm·K)
+Tw = 100  # Temperatura de ebullición del agua en °C
+Ty = 70  # Temperatura máxima de la yema en °C
 
-# Calcular la nota que necesita en el tercer certamen
-# NF = NC * 0.7 + NL * 0.3
-# NC = (C1 + C2 + C3) / 3
+# Solicitar la temperatura original del huevo
+To = float(input("Ingresa la temperatura original del huevo (en °C): "))
 
-# Rearreglando la fórmula para encontrar C3:
-# C3 = (NF_deseada - NL * 0.3) / 0.7 * 3 - C1 - C2
-
-# Calcular C3
-C3_necesaria = ((NF_deseada - NL * 0.3) / 0.7) * 3 - C1 - C2
+# Calcular el tiempo usando la fórmula
+t = (M**(2/3) * c * rho**(1/3) * K * math.pi**2 * ((4 * math.pi / 3)**(2/3)) *
+     math.log((0.76 * To - Tw) / (Ty - Tw)))
 
 # Mostrar el resultado
-print(f"Necesitas una nota de {C3_necesaria:.2f} en el tercer certamen para aprobar el ramo.")
+print(f"El tiempo que toma al centro de la yema alcanzar {Ty}°C es: {t:.2f} segundos.")
