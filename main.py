@@ -1,6 +1,11 @@
-def main():
-    name = input("Please enter your name: ")
-    print(f"Hello, {name}! Welcome.")
+#Escriba un programa que reciba como entrada el radio de un círculo y entregue como salida su perímetro y su área:
 
-if __name__ == "__main__":
-    main()
+#Ingrese el radio: 5
+#Perimetro: 31.4
+#Área: 78.5
+
+radio = float(input("Write the radio of the circle : "))
+perimeter = 2 * (radio) * 3.1416
+area = 3.1416 * (radio ** 2) 
+
+print(f"the perimeter is : {perimeter :.1f}\nthe area is : {area :.1f}")
