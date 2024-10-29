@@ -1,12 +1,11 @@
-# Solicitar al usuario que ingrese un entero de tres dígitos
-number = input("Enter a three-digit integer: ")
+import math
 
-# Verificar que el número tenga exactamente tres dígitos
-if len(number) == 3 and number.isdigit():
-    # Invertir los dígitos
-    numero_invertido = number[2] + number[1] + number[0]
-    
-    # Mostrar el resultado
-    print("The number with the digits in reverse order is:", numero_invertido)
-else:
-    print("Please, make sure to enter a three-digit number")
+# Solicitar al usuario que ingrese las longitudes de los catetos
+a = float(input("Ingresa la longitud del cateto a: "))
+b = float(input("Ingresa la longitud del cateto b: "))
+
+# Calcular la hipotenusa usando el teorema de Pitágoras
+c = math.sqrt(a**2 + b**2)
+
+# Mostrar el resultado
+print(f"La longitud de la hipotenusa c es: {c}")
