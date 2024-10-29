@@ -1,11 +1,11 @@
-#Escriba un programa que reciba como entrada el radio de un círculo y entregue como salida su perímetro y su área:
+# Pedir al usuario que ingrese 4 notas
+note1 = float(input("Enter the first note: "))  # Primera nota
+note2 = float(input("Enter the second note: "))  # Segunda nota
+note3 = float(input("Enter the third note: "))   # Tercera nota
+note4 = float(input("Enter the quarter note: "))    # Cuarta nota
 
-#Ingrese el radio: 5
-#Perimetro: 31.4
-#Área: 78.5
+# Calcular el promedio
+promedio = (note1 + note2 + note3 + note4) / 4  # Sumar las notas y dividir entre 4
 
-radio = float(input("Write the radio of the circle : "))
-perimeter = 2 * (radio) * 3.1416
-area = 3.1416 * (radio ** 2) 
-
-print(f"the perimeter is : {perimeter :.1f}\nthe area is : {area :.1f}")
+# Mostrar el resultado
+print("El promedio es:", promedio)  # Imprimir el promedio
