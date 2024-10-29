@@ -1,10 +1,8 @@
-# Solicitar la hora actual (en formato de 24 horas)
-hora_actual = int(input("Ingresa la hora actual (0-23): "))
-# Solicitar el número de horas a sumar
-horas_a_sumar = int(input("Ingresa el número de horas a sumar: "))
+# Solicitar al usuario que ingrese un número real
+numero_real = float(input("Ingresa un número real: "))
 
-# Calcular la nueva hora
-nueva_hora = (hora_actual + horas_a_sumar) % 24
+# Calcular la parte decimal
+parte_decimal = numero_real - int(numero_real)
 
 # Mostrar el resultado
-print(f"La hora después de {horas_a_sumar} horas será: {nueva_hora}")
+print(f"La parte decimal de {numero_real} es: {parte_decimal}")
